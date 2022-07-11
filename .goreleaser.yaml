@@ -11,10 +11,28 @@ builds:
       - linux
 nfpms:
   -
-    maintainer: Ben Rockwood <ben@cuddletech.com>
+    vendor: "Mondoo, Inc."
+    homepage: "https://mondoo.com"
+    license: "Proprietary"
+    section: "default"
+    priority: "extra"
+    maintainer: "Ben Rockwood <benr@cuddletech.com>"
+    description: |
+      This is my testerific test of goreleaser.
+      My packaging is dopy dope.
+    bindir: /usr/local/bin
+    contents:
+    - src: testerific
+      dst: /usr/local/bin/testerific
     formats:
       - deb
       - rpm
+    overrides:
+      rpm:
+        #provides:
+        #  - mondoo({{.arch}})
+        #changelog: "changelog.yaml"
+
 archives:
   - replacements:
       darwin: Darwin
@@ -32,3 +50,4 @@ changelog:
     exclude:
       - '^docs:'
       - '^test:'
+      - '^tmp:'

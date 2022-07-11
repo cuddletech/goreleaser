@@ -1,0 +1,7 @@
+- semver: "0.0.0"
+  date: "2022-01-01T00:00:00Z"
+  packager: "Mondoo <hello@mondoo.com>"
+  urgency: "low"
+  distribution: "stable"
+  changes:
+    - note: "Find our complete changelog here: https://mondoo.com/releases/"
